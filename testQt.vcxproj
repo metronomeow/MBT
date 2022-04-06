@@ -148,9 +148,17 @@
   <ItemGroup>
     <ClCompile Include="Com_ports.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Outputs.cpp" />
+    <ClCompile Include="Parametrics.cpp" />
+    <ClCompile Include="Plots.cpp" />
+    <ClCompile Include="Widget.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Com_ports.h" />
+    <ClInclude Include="Outputs.h" />
+    <ClInclude Include="Parametrics.h" />
+    <ClInclude Include="Plots.h" />
+    <ClInclude Include="Widget.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
