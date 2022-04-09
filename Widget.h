@@ -4,11 +4,18 @@
 
 class Widget : public QWidget{
 public:
+    bool Com=false, Par=false, Plo=false, Out=false;
     Widget();
+private:
     QPushButton* btnConnect = new QPushButton("Com_Ports", this);
     QPushButton* btnParam = new QPushButton("Parametric", this);
     QPushButton* btnPlot = new QPushButton("Plots", this);
     QPushButton* btnOutput = new QPushButton("Outputs", this);
-    void handleButton();
+private slots:
+    void on_pushButton1_clicked();
+    void on_pushButton2_clicked();
+    void on_pushButton3_clicked();
+    void on_pushButton4_clicked();
+
 };
 

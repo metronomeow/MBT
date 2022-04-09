@@ -9,7 +9,6 @@ class Com_ports : public Widget {
     std::string Adress;
     
 public:
-
     Com_ports();
     
     //QPushButton* btnConnect = new QPushButton("Com_Ports", this);

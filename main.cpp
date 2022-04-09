@@ -1,16 +1,37 @@
+#include"Widget.h"
+#include"Com_ports.h"
+#include"Parametrics.h"
+#include"Plots.h"
+#include"Outputs.h"
 #include <QApplication>
 #include <QWidget>
 #include <QPushButton>
 #include <QSerialPort>
 #include <QKeyEvent>
-#include"MainWindow.h"
+#include<qmessagebox.h>
 
 int main(int argc, char* argv[]) {
    
         QApplication app(argc, argv);
+        Widget My_window;
+        Com_ports Port;
+        My_window.show();
+        if (My_window.Com) {
+            Port.show();
+        }
+        /*
+        Parametrics param;
 
-        Com_ports Port1;
-        Port1.show();
+        Port.show();
+        param.show();*/
+       // if (Port1.clicked());
+       // QMessageBox::about(&Port1, "Com", "Yes");
+
+        
+      //  QPushButton hi;
+       // connect(hi, SIGNAL(clicked()), Port1, SLOT(on_pushButton_clicked()));
+
+        //Port1.on_pushButton_clicked();
         //QKeyEvent(QCloseEvent(), 27, , nullptr, false, 0);
 
     return app.exec();
