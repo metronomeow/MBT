@@ -1,8 +1,9 @@
 #pragma once
 #include <qwidget.h>
 #include"Widget.h"
-class Outputs : public Widget{
+class Outputs  : public QWidget {
 
-
+public:
+    Outputs();
 };
 

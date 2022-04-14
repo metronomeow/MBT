@@ -1,7 +1,7 @@
 #pragma once
 #include"Widget.h"
 #include <qwidget.h>
-class Plots : public Widget{
+class Plots : public QWidget {
 
 public:
     Plots();

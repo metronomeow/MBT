@@ -1,9 +1,16 @@
 #include "Com_ports.h"
 #include"Widget.h"
 #include<qlabel.h>
+//#include<QSerialPort>
 
 Com_ports::Com_ports() {
-     QLabel text("This is first window", this, 0);
-    // connect(btnConnect, SIGNAL(clicked()), this, SLOT(on_pushButton_clicked()));
+    this->resize(1500, 1000);
+    this->setWindowTitle("Com-ports");
 
 }
+//Com_ports::Com_ports(Widget *wgt) {
+//     QLabel* text = new QLabel("Teeeeeeeext",wgt);
+//    // (*text).setText("This is text");
+//     //(*text).setFixedSize(100, 100);
+//    // Number = this->;
+//}

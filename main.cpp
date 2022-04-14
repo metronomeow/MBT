@@ -16,12 +16,9 @@ int main(int argc, char* argv[]) {
         Widget My_window;
         Com_ports Port;
         My_window.show();
-        if (My_window.Com) {
-            Port.show();
-        }
+        
         /*
         Parametrics param;
-
         Port.show();
         param.show();*/
        // if (Port1.clicked());
