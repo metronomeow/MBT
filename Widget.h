@@ -5,6 +5,7 @@
 #include<QMenuBar>
 #include<QToolBar>
 #include<QAction>
+#include<QtGui>
 
 class Widget : public QMainWindow{
    // Q_OBJECT;
