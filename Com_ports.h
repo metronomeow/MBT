@@ -3,8 +3,9 @@
 #include <qwidget.h>
 #include<string>
 #include<QPushButton>
+#include<QDockWidget>
 #include<QSerialPort>
-class Com_ports : public QWidget {
+class Com_ports : public QDockWidget {
     
     int Number=0;
     bool Parity=0;

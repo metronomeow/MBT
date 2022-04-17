@@ -1,7 +1,7 @@
 #pragma once
-#include <qwidget.h>
+#include <QDockWidget>
 #include"Widget.h"
-class Outputs  : public QWidget {
+class Outputs  : public QDockWidget {
 
 public:
     Outputs();

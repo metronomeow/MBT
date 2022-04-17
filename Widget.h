@@ -1,21 +1,30 @@
 #pragma once
-#include <qwidget.h>
+#include <QMainWindow>
 #include<QPushButton>
+#include<QMenu>
+#include<QMenuBar>
+#include<QToolBar>
+#include<QAction>
 
-class Widget : public QWidget{
+class Widget : public QMainWindow{
+   // Q_OBJECT;
 public:
-    bool Com=false, Par=false, Plo=false, Out=false;
     Widget();
 private:
-    QPushButton* btnConnect = new QPushButton("Com_Ports", this);
+    QAction* actCom_Port;
+    QAction* actParam;
+    QAction* actOutputs;
+    QAction* actPlots;
+
+   /* QPushButton* btnConnect = new QPushButton("Com_Ports", this);
     QPushButton* btnParam = new QPushButton("Parametric", this);
     QPushButton* btnPlot = new QPushButton("Plots", this);
-    QPushButton* btnOutput = new QPushButton("Outputs", this);
+    QPushButton* btnOutput = new QPushButton("Outputs", this);*/
 private slots:
-    void on_pushButton1_clicked();
-    void on_pushButton2_clicked();
-    void on_pushButton3_clicked();
-    void on_pushButton4_clicked();
+    void on_actCom_Ports();
+    void on_actParam();
+    void on_actOutputs();
+    void on_actPlots();
 
 };
 

@@ -1,7 +1,7 @@
 #pragma once
 #include"Widget.h"
-#include <qwidget.h>
-class Parametrics : public QWidget {
+#include <QDockWidget>
+class Parametrics : public QDockWidget {
 
 public:
     Parametrics();
