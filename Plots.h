@@ -8,13 +8,16 @@
 
 class Plots : public QDockWidget {
 private:
-    QWidget* PaintWgt = new QWidget;
+    QWidget* PaintWgt = new QWidget(this);
     std::vector<double> Points;
     bool LoadFromFile(char* argv);
     QPushButton* btn_ChooseFile = new QPushButton("File", this);
 
 protected:
+ 
+
     void paintEvent(QPaintEvent* event);
+    
 
 public:
     Plots();

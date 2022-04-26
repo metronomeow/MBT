@@ -6,10 +6,16 @@
 #include<QPushButton>
 #include<QDockWidget>
 #include<QMessageBox>
+#include<QPalette>
 
 Widget::Widget() : QMainWindow(nullptr) {
     this->resize(1500, 1000);
     //this->setStyleSheet("background-color:blue;");
+    QPalette Pal(palette());
+    // устанавливаем цвет фона 
+    Pal.setColor(QPalette::Window, QColor("#33ccff"));
+    this->setAutoFillBackground(true);
+    this->setPalette(Pal); 
     this->setWindowTitle("MBT SCAN");
 
     actCom_Port = new QAction( "&Com_Ports", this);
@@ -23,6 +29,7 @@ Widget::Widget() : QMainWindow(nullptr) {
     connect(actOutputs, &QAction::triggered, this, &Widget::on_actOutputs);
     connect(actPlots, &QAction::triggered, this, &Widget::on_actPlots);
 
+    toolbar->setStyleSheet("background:white");
     toolbar->addAction(actCom_Port);
     toolbar->addSeparator();
     toolbar->addAction(actParam);

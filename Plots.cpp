@@ -3,18 +3,18 @@
 OPENFILENAME ofn;
 
 void Plots::paintEvent(QPaintEvent* event) {
-        QPainter p(this);
-
+        
+        QPainter p(PaintWgt);
         /*QPen pen(QColor(0, 5, 100), 2, Qt::SolidLine);
         p.setPen(pen);
 
         p.drawLine(QPoint(100, 100), QPoint(1000, 1000));*/
+        QPen pen(QColor(0, 5, 200), 1, Qt::SolidLine);
 
         if (!Points.empty()) {
-            QPen pen(QColor(0, 5, 200), 1, Qt::SolidLine);
             p.setPen(pen);
 
-           // p.drawRect(100, 100, 700, 700);
+            p.drawRect(100, 100, 700, 700);
             for (int i = 0; i < Points.size()-1; i++) {
                 p.drawLine(i, Points[i] * (100), i+1, Points[i + 1]*(100));
             }
@@ -25,7 +25,8 @@ void Plots::paintEvent(QPaintEvent* event) {
 Plots::Plots() {
     this->resize(1500, 1000);
     this->setWindowTitle("Plots");
-
+    PaintWgt->setGeometry(50, 50, 1200, 700);
+    PaintWgt->show();
     connect(btn_ChooseFile, &QPushButton::clicked, this, &Plots::on_btnChooseFile);
     btn_ChooseFile->setGeometry(10, 10, 60, 60);
 
